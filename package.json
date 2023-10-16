@@ -1,13 +1,9 @@
 {
   "name": "lagospoloclub",
   "version": "1.0.0",
-  "engines": {
-    "node": "18.x"
-  },
   "scripts": {
-    "dev": "next",
-    "build": "next --openssl-legacy-provider build",
-    "start": "next --openssl-legacy-provider start",
+    "dev": "export NODE_OPTIONS=--openssl-legacy-provider; next dev",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider; next build",
     "post-update": "yarn upgrade --latest"
   },
   "dependencies": {
